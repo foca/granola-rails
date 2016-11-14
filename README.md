@@ -1,4 +1,4 @@
-# Granola::Rails
+# Granola::Rails [![Build Status](https://img.shields.io/travis/foca/granola-rails.svg)](https://travis-ci.org/foca/granola-rails) [![RubyGem](https://img.shields.io/gem/v/granola-rails.svg)](https://rubygems.org/gems/granola-rails)
 
 Integrate [Granola](https://github.com/foca/granola) into Rails' rendering.
 
