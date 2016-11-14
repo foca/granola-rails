@@ -73,10 +73,6 @@ Or install it yourself as:
 $ gem install granola-rails
 ```
 
-## Contributing
-
-Contribution directions go here.
-
 ## License
 
 The gem is available as open source under the terms of the MIT License. See the
