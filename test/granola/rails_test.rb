@@ -33,12 +33,20 @@ class Granola::Rails::RenderingTest < ActionDispatch::IntegrationTest
   end
 
   test "works with Rails' respond_to and multiple registered formats" do
-    get "/json/respond_to", headers: { "Accept" => Mime[:yaml] }
+    get "/json/respond_to", env: { "HTTP_ACCEPT" => Mime[:yaml].to_s }
     assert_response :success
     assert_equal YAML.load(response.body), { name: "Jane Doe", age: 50 }
 
-    get "/json/respond_to", headers: { "Accept" => Mime[:json] }
+    get "/json/respond_to", env: { "HTTP_ACCEPT" => Mime[:json].to_s }
     assert_response :success
     assert_equal JSON.load(response.body), { "name" => "Jane Doe", "age" => 50 }
+  end
+
+  def get(path, env: {}, params: {})
+    if Rails.version < "5"
+      super(path, {}, env)
+    else
+      super
+    end
   end
 end
