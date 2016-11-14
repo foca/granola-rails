@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
     "lib/granola/rails/version.rb",
   ]
 
-  s.add_dependency "rails", "~> 5.0.0", ">= 5.0.0.1"
+  s.add_dependency "rails", ">= 4.0", "< 6"
 
   # FIXME: Once Granola 1.0 launches, change this to depend on "~> 1.0"
   s.add_dependency "granola", ">= 0.13", "~> 0"
