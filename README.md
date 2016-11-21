@@ -53,6 +53,17 @@ class UsersController < ApplicationController
 end
 ```
 
+## Rails Generators
+
+This library provides a `serializer` generator:
+
+``` bash
+$ rails generate serializer user
+      create  app/serializers/user_serializer.rb
+      invoke  test_unit
+      create    test/serializers/user_serializer_test.rb
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
