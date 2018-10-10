@@ -1,14 +1,20 @@
 language: ruby
 script: make test
 rvm:
-  - 2.3.1
-  - 2.2.5
+  - 2.5.1
+  - 2.4.4
+  - 2.3.7
   - ruby-head
 env:
-  - "RAILS_VERSION=5.0.0"
-  - "RAILS_VERSION=4.2.0"
+  - "RAILS_VERSION=5.2"
+  - "RAILS_VERSION=5.1"
+  - "RAILS_VERSION=5.0"
+  - "RAILS_VERSION=4.2"
   - "RAILS_VERSION=master"
 matrix:
   allow_failures:
     - env: "RAILS_VERSION=master"
     - rvm: ruby-head
+  exclude:
+    - env: RAILS_VERSION=master
+      rvm: 2.3.7
