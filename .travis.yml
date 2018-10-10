@@ -5,8 +5,10 @@ rvm:
   - 2.2.5
   - ruby-head
 env:
-  - "RAILS_VERSION=5.0.0"
-  - "RAILS_VERSION=4.2.0"
+  - "RAILS_VERSION=5.2"
+  - "RAILS_VERSION=5.1"
+  - "RAILS_VERSION=5.0"
+  - "RAILS_VERSION=4.2"
   - "RAILS_VERSION=master"
 matrix:
   allow_failures:

@@ -34,6 +34,7 @@ class TestsController < ApplicationController
   private
 
   def load_resource
-    @person = Person.new(DEFAULTS.merge(params.fetch(:person, {}).to_h))
+    attrs = request.parameters.fetch(:person, {}).reverse_merge(DEFAULTS)
+    @person = Person.new(attrs)
   end
 end
